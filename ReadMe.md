@@ -1,5 +1,26 @@
 # Spring Boot - Final Project
 
+## Development Instructions
+
+### Database initialization
+The following commands will create a mysql docker container on your system. To use this, you must have docker installed on your system.
+
+Create the container (run from the root of this repo):
+```shell
+docker-compose -f "./docker/docker-compose.yml" -p "todo-application-mysql" up -d
+```
+
+This will create and launch a docker container using the mysql image and run it on `localhost:3606`. This will also initialize the database tables for it.
+
+To remove the container run the following commands (if these commands do not work, ensure that the name of the created container is todo-application-mysql (`-db-1` is appended to the end)):
+```shell
+docker stop todo-application-mysql-db-1
+```
+
+```shell
+docker rm -v todo-application-mysql-db-1
+```
+
 ## Introduction: 
 Life gets hectic, and we get it. Balancing your personal tasks, collaborating with others, and keeping up with shared responsibilities can be a juggling act. That's why we've created a task management and collaboration app that's designed to simplify your daily life. Whether you're a student sharing a space with roommates, part of a team managing projects, or just looking for a way to stay organized, our app has got you covered.
 

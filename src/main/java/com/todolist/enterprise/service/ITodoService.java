@@ -8,5 +8,5 @@ public interface ITodoService {
      * @param taskId a unique identifier for a recipe
      * @return the matching task, or null if no matches found
      */
-    Task getTaskById(int taskId);    
+    public Task getTaskById(int taskId);    
 }

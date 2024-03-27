@@ -1,9 +1,11 @@
 package com.todolist.enterprise.service;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import com.todolist.enterprise.dto.Task;
 import java.util.Date;
 
 @Component
+@Profile("test")
 public class TodoServiceStub implements ITodoService {
     @Override
     public Task getTaskById(int taskId) {
